@@ -19,3 +19,12 @@ test('compares two nested objects', () => {
 test('compares two nested objects with different values', () => {
   expect(compareObjects({ a: { b: 1 }}, { a: { b: 2 }})).toBe(false);
 });
+
+test('compares two nested objects with three levels with same values', () => {
+  expect(compareObjects({ a: { b: 1 , x: { y: 1}}}, { a: { b: 1, x : {y:1} }})).toBe(true);
+});
+
+test('compares two nested objects with three levels with different values', () => {
+  expect(compareObjects({ a: { b: 1 , x: { y: 1}}}, { a: { b: 1, x : {y:2} }})).toBe(false);
+});
+
