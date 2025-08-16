@@ -6,6 +6,8 @@
  */
 function isNullObject(variable) {
     // Your code here
+    let result = variable === null ?  true :  false;
+    return result;
   }
   
   module.exports = isNullObject;

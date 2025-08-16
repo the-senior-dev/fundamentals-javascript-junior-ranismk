@@ -6,6 +6,8 @@
  */
 function getDataType(variable) {
   // Your code here
+  // if(!variable)
+  return typeof variable;
 }
 
 module.exports = getDataType;
